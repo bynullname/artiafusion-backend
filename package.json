@@ -1,0 +1,11 @@
+{
+  "name": "artiafusion-backend",
+  "version": "1.0.0",
+  "description": "1. Start Postgres and Redis instances:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,5 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from flask_migrate import Migrate
+
 import os
 import shopify
 from shopify.resources import Metafield
@@ -13,12 +15,18 @@ from midjourney_api import TNL
 from functools import wraps
 from flask import make_response
 from CaseGenerator import CaseGenerator
+from models import db, Mj
+
+
 load_dotenv()
 SHOPIFY_API_KEY = os.getenv("API_KEY")
 SHOPIFY_API_SECRET = os.getenv("PASSWORD")
 SHOP_NAME = os.getenv("SHOP_NAME")
 JWT_SECRET = os.getenv("JWT_SECRET")  # JWT密钥
 TNL_API_KEY = os.getenv("TNL_API_KEY")
+db_name = os.getenv("db_name")
+db_psw = os.getenv("db_psw")
+
 
 JWT_EXPIRY = timedelta(minutes=60)  # JWT过期时间设置为1小时
 
@@ -26,10 +34,18 @@ tnl = TNL(TNL_API_KEY)
 cg =CaseGenerator()
 shop_url = f"https://{SHOPIFY_API_KEY}:{SHOPIFY_API_SECRET}@{SHOP_NAME}.myshopify.com/admin"
 shopify.ShopifyResource.set_site(shop_url)
-app = Flask(__name__)
-metaManager = ShopifyMetafieldManager("artiafusion", SHOPIFY_API_SECRET)
-CORS(app)
 
+metaManager = ShopifyMetafieldManager("artiafusion", SHOPIFY_API_SECRET)
+
+
+app = Flask(__name__)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://postgres:{db_psw}@localhost:5432/{db_name}'
+
+db.init_app(app)
+migrate = Migrate(app, db)
+
+CORS(app)
 
 
 def token_required(f):
@@ -71,7 +87,8 @@ def token_required(f):
             return jsonify({'message': 'Signature expired. Please log in again.'}), 401
         except jwt.InvalidTokenError:
             return jsonify({'message': 'Invalid token. Please log in again.'}), 401
-
+        except Exception as e:
+            return jsonify({'message': f'Jwt : {e}'}), 401
         return f(*args, **kwargs)
     return decorated
 
@@ -105,11 +122,6 @@ def request_verification():
 @app.route('/api/mj/imagine/', methods=['POST'])
 @token_required
 def imagine():
-    """
-    该接口用于处理 "Imagine" 请求。首先，它会验证 JWT token 的有效性和过期情况。
-    然后，如果 JWT token 有效且未过期，该接口将从请求体中提取 'prompt' 和 'customer_id'，并将 'prompt' 提交给 TNL API。
-    如果 TNL API 响应表示操作成功，则返回成功消息。否则，返回错误消息。
-    """
     try:
         data = request.get_json()
         prompt = data.get('prompt')
@@ -120,50 +132,69 @@ def imagine():
 
         response = tnl.imagine(prompt)
         if response['success'] != True:
-            return jsonify({'message': 'imagine is running failed, pls contact admin'}), 400
+            return jsonify({'message': 'imagine is running failed, please contact admin'}), 400
 
         messageId = response['messageId']
-        return jsonify({'message': 'Success','messageId':messageId}), 200
+
+        # Insert data into the database
+        mj = Mj(customer_id=customer_id, prompt=prompt, messageId=messageId)
+        db.session.add(mj)
+        db.session.commit()
+
+        return jsonify({'message': 'Success', 'messageId': messageId}), 200
     except Exception as e:
+        return jsonify({'message': str(e)}), 400
+
+
+@app.route('/api/mj/query/', methods=['POST'])
+def queryMj():
+    try:
+        data = request.get_json()
+        messageId = data.get('messageId')
+        if not messageId:
+            return jsonify({'message': 'messageId missing'}), 400
+
+        mj = Mj.query.filter_by(messageId=messageId).first()
+        if mj:
+            if mj.imageUrls:
+                return jsonify({'message': 'Success', 'imageUrls': mj.imageUrls}), 200
+            else:
+                return jsonify({'message': 'Work in progres,pls wait moment.'}), 200
+        else:
+            return jsonify({'message': 'Not found'}), 404
+    except Exception as e:
+        print(e)
         return jsonify({'message': str(e)}), 400
 
 
 @app.route('/webhook/mj', methods=['POST'])
 def MjWebhook():
-    """
-    该接口用于处理来自 MJ Webhook 的 POST 请求。在接收到请求后，它将打印并返回请求的 JSON 数据。
-    """
     try:
         data = request.get_json()
         print(data)
-        # cg.do(data.get('imageUrls')[0])
-        # data demo
-        # {
-        #   'content': 'high texture quality portrait of a young woman with freckles and crystal blue eyes with wreath in her hair, 4k', 
-        #   'imageUrl': 'https://cdn.discordapp.com/attachments/1128685518339710976/1129075874763903098/AjKaBaL_high_texture_quality_portrait_of_a_young_woman_with_fre_3d049b25-3b7a-4ad1-a50c-88b23fc51f27.png', 
-        #   'imageUrls': ['https://cdn.midjourney.com/3d049b25-3b7a-4ad1-a50c-88b23fc51f27/0_0.png', 
-        #   'https://cdn.midjourney.com/3d049b25-3b7a-4ad1-a50c-88b23fc51f27/0_1.png',
-        #   'https://cdn.midjourney.com/3d049b25-3b7a-4ad1-a50c-88b23fc51f27/0_2.png', 
-        #   'https://cdn.midjourney.com/3d049b25-3b7a-4ad1-a50c-88b23fc51f27/0_3.png'], 
-        #   'buttons': ['U1', 'U2', 'U3', 'U4', '🔄', 'V1', 'V2', 'V3', 'V4'], 
-        #   'createdAt': '2023-07-13T15:44:25.909Z', 
-        #   'responseAt': '2023-07-13T15:44:26.741Z', 
-        #   'ref': '', 
-        #   'description': '', 
-        #   'type': 'imagine', 
-        #   'originatingMessageId': 
-        #   '1pckDYipUHe4wPvQZbnp', 
-        #   'buttonMessageId': 'PgPGNfV1NGvXkCkKhWtO'
-        # }
-        # 107.178.200.219 - - [13/Jul/2023 23:44:27] "POST /webhook/mj HTTP/1.1" 200 -
+
+        originatingMessageId = data.get('originatingMessageId')
+        if originatingMessageId:
+            mj = Mj.query.filter_by(messageId=originatingMessageId).first()
+            if mj:
+                # Update relevant fields based on data
+                mj.content = data.get('content')
+                mj.imageUrl = data.get('imageUrl')
+                mj.imageUrls = data.get('imageUrls')
+                mj.type = data.get('type')
+                mj.createdAt = data.get('createdAt')
+                mj.responseAt = data.get('responseAt')
+
+                db.session.commit()
+
+        return jsonify(data), 200
+    except Exception as e:
+        return jsonify({'message': str(e)}), 400
 
         return 'hello'
     except Exception as e:
         print(e)
         return jsonify({'message': f'{e}'}), 400
-
-
-
 
 
 

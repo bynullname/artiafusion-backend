@@ -192,11 +192,6 @@ def MjWebhook():
     except Exception as e:
         return jsonify({'message': str(e)}), 400
 
-        return 'hello'
-    except Exception as e:
-        print(e)
-        return jsonify({'message': f'{e}'}), 400
-
 
 
 if __name__ == '__main__':

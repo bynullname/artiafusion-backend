@@ -26,6 +26,7 @@ JWT_SECRET = os.getenv("JWT_SECRET")  # JWT密钥
 TNL_API_KEY = os.getenv("TNL_API_KEY")
 db_name = os.getenv("db_name")
 db_psw = os.getenv("db_psw")
+PORT = os.getenv("PORT")
 
 
 JWT_EXPIRY = timedelta(minutes=60)  # JWT过期时间设置为1小时
@@ -202,6 +203,6 @@ if __name__ == '__main__':
     # 设置SSL上下文
     context = ('fullchain.pem', 'privkey.pem')
     # 运行Flask应用程序，启用HTTPS
-    app.run(host='0.0.0.0', port=6090, ssl_context=context, debug=True)
+    app.run(host='0.0.0.0', port=PORT, ssl_context=context, debug=True)
 
 

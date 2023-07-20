@@ -50,19 +50,6 @@ CORS(app)
 
 
 def token_required(f):
-    """
-    token_required 是一个装饰器函数，它用于验证 JWT token 的有效性和过期情况。
-    
-    这个装饰器首先从请求的 headers 中获取 JWT token。如果没有找到 JWT token，它会返回一个错误消息。
-    如果找到了 JWT token，装饰器将尝试解析 JWT token。如果 JWT token 已经过期或无效，装饰器会返回相应的错误消息。
-    
-    然后，装饰器将从请求体中获取 'customer_id'。如果找不到 'customer_id'，它会返回一个错误消息。
-    如果找到了 'customer_id'，装饰器将检查它是否与 JWT token 中的 'customer_id' 一致。如果不一致，它会返回一个错误消息。
-    
-    如果所有的检查都通过，装饰器将调用原始的路由函数，并将所有的参数传递给它。
-    
-    你可以将这个装饰器应用到任何需要 JWT token 验证的 Flask 路由上。
-    """
     @wraps(f)
     def decorated(*args, **kwargs):
         auth_header = request.headers.get('token')
@@ -97,10 +84,6 @@ def token_required(f):
 
 @app.route('/api/requestVerification', methods=['POST'])
 def request_verification():
-    """
-    该接口用于请求验证。当客户提交请求时，将生成一个 JWT token，其中包含客户 ID 和 token 的过期时间。
-    该 token 然后将与客户 ID 关联，并存储在 Shopify Metafield 中。
-    """
     try:
         data = request.get_json()
         customer_id = data.get('customer_id')
@@ -121,7 +104,7 @@ def request_verification():
 
 
 @app.route('/api/mj/imagine/', methods=['POST'])
-@token_required
+# @token_required
 def imagine():
     try:
         data = request.get_json()
@@ -131,6 +114,7 @@ def imagine():
         if not prompt or not customer_id:
             return jsonify({'message': 'prompt or customer_id missing'}), 400
 
+        print(customer_id,prompt)
         response = tnl.imagine(prompt)
         if response['success'] != True:
             return jsonify({'message': 'imagine is running failed, please contact admin'}), 400

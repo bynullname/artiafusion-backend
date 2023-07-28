@@ -4,12 +4,16 @@ import os
 from dotenv import load_dotenv
 import random
 import string
-
+import shopify
+import base64
 
 load_dotenv()
 SHOPIFY_API_KEY = os.getenv("API_KEY")
 SHOPIFY_API_SECRET = os.getenv("PASSWORD")
 SHOP_NAME = os.getenv("SHOP_NAME")
+
+shop_url = f"https://{SHOPIFY_API_KEY}:{SHOPIFY_API_SECRET}@{SHOP_NAME}.myshopify.com/admin/api/2023-07"
+shopify.ShopifyResource.set_site(shop_url)
 
 def generate_random_string(length=10):
     """生成一个指定长度的随机字符串"""
@@ -98,7 +102,6 @@ class ShopifyMetafieldManager:
             return response.json()
         else:
             return f"Request failed with status code {response.status_code}"
-
 
 if __name__ == '__main__':
     metaManager = ShopifyMetafieldManager("artiafusion", SHOPIFY_API_SECRET)

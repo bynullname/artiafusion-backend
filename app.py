@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from flask_migrate import Migrate
-
+import re
 import os
 import shopify
 from shopify.resources import Metafield
@@ -16,7 +16,9 @@ from functools import wraps
 from flask import make_response
 from CaseGenerator import CaseGenerator
 from models import db, Mj
-
+import base64
+import os
+from ShopifyProduct import ProductSolver
 
 load_dotenv()
 SHOPIFY_API_KEY = os.getenv("API_KEY")
@@ -114,7 +116,19 @@ def imagine():
         if not prompt or not customer_id:
             return jsonify({'message': 'prompt or customer_id missing'}), 400
 
-        print(customer_id,prompt)
+        print("处理前： ",customer_id,prompt)
+
+
+        # 定义要剔除的模式，匹配"--ar"或"--aspect"后跟着的一个单词
+        pattern = r'--(?:ar|aspect)\s+\w+\b'
+        # 使用re.sub()将匹配的内容替换为空字符串
+        prompt = re.sub(pattern, '', prompt)
+
+
+        prompt += ' --ar 1:2'
+
+        print("处理后： ",customer_id,prompt)
+
         response = tnl.imagine(prompt)
         if response['success'] != True:
             return jsonify({'message': 'imagine is running failed, please contact admin'}), 400
@@ -150,6 +164,48 @@ def queryMj():
     except Exception as e:
         print(e)
         return jsonify({'message': str(e)}), 400
+
+
+@app.route('/api/newproduct', methods=['POST'])
+def newproduct():
+    data = request.get_json()
+    imageLayer = data.get('imageLayer', None)
+    imageProduct = data.get('imageProduct', None)
+
+    if imageLayer and imageProduct:
+        base64_str1 = imageLayer.split(",")[-1]
+        imgdataLayer = base64.b64decode(base64_str1)
+
+        base64_str2 = imageProduct.split(",")[-1]
+        imgdataProduct = base64.b64decode(base64_str2)
+
+        ps  = ProductSolver()
+        variantsId = ps.create_product(
+            title='AIGC Phone Case', 
+            body_html='AIGC Phone Case', 
+            vendor='Artia Fusion', 
+            product_type='AIGC Phone Case', 
+            tags='AIGC Phone Case', 
+            serielsName='AIGC Phone Case', 
+            productName='Phone Case', 
+            image_data_list=[imgdataProduct]
+        )
+
+        if(variantsId==None):
+            return jsonify({"status": "error", "message": "Create product failed,Contact admin."}), 400
+        
+        # with open("image1.png", 'wb') as f:
+        #     f.write(imgdataLayer)
+        
+        # with open("image2.png", 'wb') as f:
+        #     f.write(imgdataProduct)
+
+        return jsonify({"status": "success", "variantsId": variantsId}), 200
+    else:
+        return jsonify({"status": "error", "message": "No image data provided."}), 400
+
+
+
 
 
 @app.route('/webhook/mj', methods=['POST'])

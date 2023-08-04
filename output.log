@@ -1,0 +1,14 @@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:6091
+ * Running on https://172.31.1.210:6091
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 793-509-343
+185.212.61.32 - - [04/Aug/2023 12:06:21] "OPTIONS /api/newproduct HTTP/1.1" 200 -
+185.212.61.32 - - [04/Aug/2023 12:06:26] "POST /api/newproduct HTTP/1.1" 200 -
+185.212.61.32 - - [04/Aug/2023 12:06:44] "OPTIONS /api/newproduct HTTP/1.1" 200 -
+185.212.61.32 - - [04/Aug/2023 12:06:49] "POST /api/newproduct HTTP/1.1" 200 -

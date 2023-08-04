@@ -14,7 +14,6 @@ from ShopifyMetafieldManager import ShopifyMetafieldManager
 from midjourney_api import TNL
 from functools import wraps
 from flask import make_response
-from CaseGenerator import CaseGenerator
 from models import db, Mj
 import base64
 import os
@@ -34,7 +33,7 @@ PORT = os.getenv("PORT")
 JWT_EXPIRY = timedelta(minutes=60)  # JWT过期时间设置为1小时
 
 tnl = TNL(TNL_API_KEY)
-cg =CaseGenerator()
+
 shop_url = f"https://{SHOPIFY_API_KEY}:{SHOPIFY_API_SECRET}@{SHOP_NAME}.myshopify.com/admin"
 shopify.ShopifyResource.set_site(shop_url)
 

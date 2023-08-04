@@ -178,7 +178,9 @@ def newproduct():
     selectedSize = data.get('selectedSize', None)  # get selected size from the request data
     prompt = data.get('prompt',None)
     imageUrl = data.get('imageUrl',None)
-    print(prompt,imageUrl)
+    messageId = data.get('messageId',None)
+    customer_Id = data.get('customer_Id',None)
+    email = data.get('email',None)
 
     if imageLayer and imageProduct and selectedSize:
         base64_str1 = imageLayer.split(",")[-1]

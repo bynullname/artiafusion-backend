@@ -51,12 +51,17 @@ migrate = Migrate(app, db)
 CORS(app)
 
 
+def callResponse(message, status=200, log=True):
+    if log:
+        print(message)
+    return jsonify({'message': message}), status
+
 def token_required(f):
     @wraps(f)
     def decorated(*args, **kwargs):
         auth_header = request.headers.get('token')
         if not auth_header:
-            return jsonify({'message': 'No token header provided'}), 401
+            return callResponse('No token header provided',400)
 
         try:
             payload = jwt.decode(auth_header, JWT_SECRET, algorithms='HS256')
@@ -65,7 +70,7 @@ def token_required(f):
             # 获取请求数据
             data = request.get_json()
             if not data:
-                return jsonify({'message': 'No input data provided'}), 400
+                return callResponse('No input data provided',400)
             
             request_customer_id = data.get('customer_id')
             print(request_customer_id)
@@ -90,10 +95,10 @@ def request_verification():
         data = request.get_json()
         customer_id = data.get('customer_id')
         if not customer_id:
-            return jsonify({'message': 'customer_id is required'}), 400
+            return callResponse('customer_id is required', 400)
         customer = shopify.Customer.find(customer_id)
         if not customer:
-            return jsonify({'message': 'customer_id is invalid'}), 400
+            return callResponse('customer_id is invalid', 400)
         
         # 生成JWT Token
         token = jwt.encode({'customer_id': customer_id, 'exp': datetime.utcnow() + JWT_EXPIRY}, JWT_SECRET, algorithm='HS256')
@@ -102,7 +107,7 @@ def request_verification():
         return jsonify({'message': 'Verification requested'}), 200
     except Exception as e:
         print(e)
-        return jsonify({'message': f'{e}'}), 400
+        return callResponse(str(e),400)
 
 
 @app.route('/api/mj/imagine/', methods=['POST'])
@@ -114,7 +119,7 @@ def imagine():
         customer_id = data.get('customer_id')
 
         if not prompt or not customer_id:
-            return jsonify({'message': 'prompt or customer_id missing'}), 400
+            return callResponse('prompt or customer_id missing', 400)
 
         print("处理前： ",customer_id,prompt)
 
@@ -131,7 +136,7 @@ def imagine():
 
         response = tnl.imagine(prompt)
         if response['success'] != True:
-            return jsonify({'message': 'imagine is running failed, please contact admin'}), 400
+            return callResponse('Imagine is running failed, please contact admin',400)
 
         messageId = response['messageId']
 
@@ -142,7 +147,7 @@ def imagine():
 
         return jsonify({'message': 'Success', 'messageId': messageId}), 200
     except Exception as e:
-        return jsonify({'message': str(e)}), 400
+        return callResponse(str(e), 400)
 
 
 @app.route('/api/mj/query/', methods=['POST'])
@@ -151,7 +156,7 @@ def queryMj():
         data = request.get_json()
         messageId = data.get('messageId')
         if not messageId:
-            return jsonify({'message': 'messageId missing'}), 400
+            return callResponse('messageId missing',400)
 
         mj = Mj.query.filter_by(messageId=messageId).first()
         if mj:
@@ -163,16 +168,19 @@ def queryMj():
             return jsonify({'message': 'Not found'}), 404
     except Exception as e:
         print(e)
-        return jsonify({'message': str(e)}), 400
-
+        return callResponse(str(e),400)
 
 @app.route('/api/newproduct', methods=['POST'])
 def newproduct():
     data = request.get_json()
     imageLayer = data.get('imageLayer', None)
     imageProduct = data.get('imageProduct', None)
+    selectedSize = data.get('selectedSize', None)  # get selected size from the request data
+    prompt = data.get('prompt',None)
+    imageUrl = data.get('imageUrl',None)
+    print(prompt,imageUrl)
 
-    if imageLayer and imageProduct:
+    if imageLayer and imageProduct and selectedSize:
         base64_str1 = imageLayer.split(",")[-1]
         imgdataLayer = base64.b64decode(base64_str1)
 
@@ -180,20 +188,22 @@ def newproduct():
         imgdataProduct = base64.b64decode(base64_str2)
 
         ps  = ProductSolver()
+
         variantsId = ps.create_product(
-            title='AIGC Phone Case', 
-            body_html='AIGC Phone Case', 
+            selectedSize=selectedSize,  # pass the selected size to the create_product function
+            title="Members' Mind AIGC iPhone Case",
+            body_html="Prompt:"+ prompt, 
             vendor='Artia Fusion', 
-            product_type='AIGC Phone Case', 
-            tags='AIGC Phone Case', 
-            serielsName='AIGC Phone Case', 
-            productName='Phone Case', 
+            product_type='AIGC iPhone Case', 
+            tags="Members' Mind", 
+            serielsName='AIGC iPhone Case', 
+            productName='AIGC iPhone Case:'+ prompt, 
             image_data_list=[imgdataProduct]
         )
 
         if(variantsId==None):
+            print({"status": "error", "message": "Create product failed,Contact admin."})
             return jsonify({"status": "error", "message": "Create product failed,Contact admin."}), 400
-        
         # with open("image1.png", 'wb') as f:
         #     f.write(imgdataLayer)
         
@@ -202,7 +212,8 @@ def newproduct():
 
         return jsonify({"status": "success", "variantsId": variantsId}), 200
     else:
-        return jsonify({"status": "error", "message": "No image data provided."}), 400
+        print({"message": "No image data or selected size provided."})
+        return jsonify({"status": "error", "message": "No image data or selected size provided."}), 400
 
 
 

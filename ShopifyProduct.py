@@ -3,6 +3,9 @@ from dotenv import load_dotenv
 import shopify
 from shopify import Metafield
 import json
+from PIL import Image
+import io
+
 
 class ProductSolver:
     def __init__(self):
@@ -17,40 +20,46 @@ class ProductSolver:
         shopify.ShopifyResource.set_site(shop_url)
 
     def create_product(self, 
-        title='AIGC Phone Case', 
-        body_html='AIGC Phone Case', 
-        vendor='Artia Fusion', 
-        product_type='AIGC Phone Case', 
-        tags='AIGC Phone Case', 
-        serielsName='AIGC Phone Case', 
-        productName='Phone Case', 
-        image_data_list=[],  # modify this parameter to accept a list of image data
-        seo_title=None, 
-        seo_description=None):
-        
+            selectedSize, # add a new parameter to accept the selected size
+            title='AIGC Phone Case', 
+            body_html='AIGC Phone Case', 
+            vendor='Artia Fusion', 
+            product_type='AIGC Phone Case', 
+            tags='AIGC Phone Case', 
+            serielsName='AIGC Phone Case', 
+            productName='Phone Case', 
+            image_data_list=[], 
+            seo_title=None, 
+            seo_description=None):
+
         new_product = shopify.Product()
-        sizes = ["iPhone 14 Pro", 
-                "iPhone 14 Pro Max", 
-                "iPhone 14 Pro Plus", 
-                "iPhone 14",
-                "iPhone 13 Pro Max", 
-                "iPhone 13 Pro", 
-                "iPhone 13 min", 
-                "iPhone 13"]
+        sizes = [   
+                    'iphone-11',
+                    'iphone-11-pro-max',
+                    'iphone-12-mini',
+                    'iphone-12-12-pro',
+                    'iphone-12-pro-max',
+                    'iphone-13-mini',
+                    'iphone-13',
+                    'iphone-13-pro',
+                    'iphone-13-pro-max',
+                    'iphone-14',
+                    'iphone-14-plus',
+                    'iphone-14-pro',
+                    'iphone-14-pro-max'
+                ]
         abbreviations = [s.replace(' ', '').replace('iPhone','IP').upper() for s in sizes]
-        
+
         new_product.title = title
         new_product.body_html = body_html
         new_product.vendor = vendor
         new_product.product_type = product_type
         new_product.tags = tags
-        # new_product.seo_title = seo_title  # set SEO title
-        # new_product.seo_description = seo_description  # set SEO description
         new_product.metafields_global_title_tag = seo_title
         new_product.metafields_global_description_tag = seo_description
 
-        variants = [shopify.Variant({'price': '20.00', 
-                                    'compare_at_price': '25.00', 
+        variants = [shopify.Variant({'price': '25.00', 
+                                    'compare_at_price': '30.00', 
                                     'option1': size,
                                     'sku': (serielsName + productName+'#'+abbreviations[index]+'#'+str(index+1)).replace(' ','').upper(),
                                     'inventory_management': 'shopify', 
@@ -59,24 +68,41 @@ class ProductSolver:
         new_product.variants = variants
 
         images = []
-        for imgdata in image_data_list:  # modify this line to iterate through the image data list
+        for imgdata in image_data_list:  
             image = shopify.Image()
-            filename = 'some_filename.png'  # you might want to generate or pass filename for each image data
-            image.attach_image(imgdata, filename=filename)  # directly use image data to attach image
+            filename = 'some_filename.png' 
+            image.attach_image(imgdata, filename=filename)  
             images.append(image)
         new_product.images = images
 
-
-        success = new_product.save()  # returns True if the product was saved successfully, the product data gets updated if it was saved
+        success = new_product.save()  
 
         if success:
-            print(f"Successfully added product {new_product.id} {new_product.variants[0].id}")
-            return new_product.variants[0].id
+            selected_variant_id = None  # to store the id of the selected variant
+            for variant in new_product.variants:  # iterate through all the variants
+                if variant.option1 == selectedSize:  # find the variant with the selected size
+                    selected_variant_id = variant.id
+                    break
+            if selected_variant_id is not None:
+                print(f"Successfully added product {new_product.id}, selected variant id: {selected_variant_id}")
+            else:
+                print(f"Selected size: {selectedSize} is not a valid size.")
+            return selected_variant_id
         else:
             print(f"Failed to add product: {new_product.errors}")
             return None
 
+def image_to_byte_array(image:Image):
+    imgByteArr = io.BytesIO()
+    image.save(imgByteArr, format='PNG')  # Change the format to 'PNG'
+    imgByteArr = imgByteArr.getvalue()
+    return imgByteArr
+
 if __name__ == '__main__':
+    # Open an image file
+    with Image.open('image1.png') as img:  # Change the filename to 'image1.png'
+        # Convert image data to byte array
+        image_data = image_to_byte_array(img)
+        
     ps = ProductSolver()
-    # product = ps.create_product(paths=['0_2.png'])
-    # print(product)
+    ps.create_product(selectedSize='iphone-14-pro', image_data_list=[image_data])  # Call the create_product method with the image data

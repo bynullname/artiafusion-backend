@@ -14,7 +14,7 @@ from ShopifyMetafieldManager import ShopifyMetafieldManager
 from midjourney_api import TNL
 from functools import wraps
 from flask import make_response
-from models import db, Mj
+from models import db, Mj, Product
 import base64
 import os
 from ShopifyProduct import ProductSolver
@@ -48,6 +48,7 @@ db.init_app(app)
 migrate = Migrate(app, db)
 
 CORS(app)
+
 
 
 def callResponse(message, status=200, log=True):
@@ -116,6 +117,8 @@ def imagine():
         data = request.get_json()
         prompt = data.get('prompt')
         customer_id = data.get('customer_id')
+        customer_name = data.get('customer_name',None)
+        customer_email = data.get('customer_email',None)
 
         if not prompt or not customer_id:
             return callResponse('prompt or customer_id missing', 400)
@@ -140,7 +143,12 @@ def imagine():
         messageId = response['messageId']
 
         # Insert data into the database
-        mj = Mj(customer_id=customer_id, prompt=prompt, messageId=messageId)
+        mj = Mj(customer_id=customer_id, 
+                prompt=prompt, 
+                messageId=messageId,
+                customer_name=customer_name,
+                customer_email=customer_email
+                )
         db.session.add(mj)
         db.session.commit()
 
@@ -178,8 +186,9 @@ def newproduct():
     prompt = data.get('prompt',None)
     imageUrl = data.get('imageUrl',None)
     messageId = data.get('messageId',None)
-    customer_Id = data.get('customer_Id',None)
-    email = data.get('email',None)
+    customer_id = data.get('customer_id',None)
+    customer_email = data.get('customer_email',None)
+    customer_name = data.get('customer_name',None)
 
     if imageLayer and imageProduct and selectedSize:
         base64_str1 = imageLayer.split(",")[-1]
@@ -205,11 +214,32 @@ def newproduct():
         if(variantsId==None):
             print({"status": "error", "message": "Create product failed,Contact admin."})
             return jsonify({"status": "error", "message": "Create product failed,Contact admin."}), 400
-        # with open("image1.png", 'wb') as f:
-        #     f.write(imgdataLayer)
-        
-        # with open("image2.png", 'wb') as f:
-        #     f.write(imgdataProduct)
+
+        # 根据时间戳创建人类易读的时间作为文件夹名
+        folder_name = f"{int(datetime.utcnow().timestamp())}_{variantsId}"
+
+        # 每张图片对应的文件名前缀
+        filename_prefixes = ["print", "product"]
+        # 保存两张图片到文件夹中，同时指定每张图片的文件名前缀
+        image_paths = save_images([imgdataLayer, imgdataProduct],filename_prefixes, '/home/ubuntu/ImageStore', folder_name)
+
+
+        product_entry = Product(
+            variantsId=variantsId,
+            customer_id=customer_id,
+            customer_name=customer_name,
+            customer_email=customer_email,
+            messageId=messageId,
+            imageUrl=imageUrl,
+            printImageUrl=image_paths[0],
+            prodImageUrl=image_paths[1],
+            prompt=prompt,
+            selectedSize=selectedSize,
+            responseAt=datetime.utcnow(),
+        )
+        db.session.add(product_entry)
+        db.session.commit()
+
 
         return jsonify({"status": "success", "variantsId": variantsId}), 200
     else:
@@ -244,6 +274,24 @@ def MjWebhook():
     except Exception as e:
         return jsonify({'message': str(e)}), 400
 
+def save_images(image_data_list, filename_prefixes,folder_base, folder_name):
+    folder_path = os.path.join(folder_base, folder_name)
+    os.makedirs(folder_path, exist_ok=True)  # 创建文件夹，如果已存在则忽略
+
+    timestamp = datetime.utcnow().timestamp()
+    filenames = []
+
+    for idx, img_data in enumerate(image_data_list):
+        filename_prefix = filename_prefixes[idx]
+        filename = f"{filename_prefix}_{timestamp:.0f}.png"
+        filepath = os.path.join(folder_path, filename)
+
+        with open(filepath, "wb") as img_file:
+            img_file.write(img_data)
+
+        filenames.append(filename)
+
+    return [os.path.join(folder_name, fn) for fn in filenames]
 
 
 if __name__ == '__main__':

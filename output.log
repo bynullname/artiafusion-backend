@@ -7,8 +7,410 @@
 [33mPress CTRL+C to quit[0m
  * Restarting with stat
  * Debugger is active!
- * Debugger PIN: 793-509-343
-185.212.61.32 - - [04/Aug/2023 12:06:21] "OPTIONS /api/newproduct HTTP/1.1" 200 -
-185.212.61.32 - - [04/Aug/2023 12:06:26] "POST /api/newproduct HTTP/1.1" 200 -
-185.212.61.32 - - [04/Aug/2023 12:06:44] "OPTIONS /api/newproduct HTTP/1.1" 200 -
-185.212.61.32 - - [04/Aug/2023 12:06:49] "POST /api/newproduct HTTP/1.1" 200 -
+ * Debugger PIN: 288-121-348
+212.107.29.83 - - [09/Aug/2023 08:15:32] "OPTIONS /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:15:33] "POST /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:15:39] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:15:39] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:15:44] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:15:49] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:15:49] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:15:54] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:15:59] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:15:59] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:16:04] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:16:09] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:16:10] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:16:14] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:16:19] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:16:19] "POST /api/mj/query/ HTTP/1.1" 200 -
+107.178.236.3 - - [09/Aug/2023 08:16:21] "POST /webhook/mj HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:16:24] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:20:41] "OPTIONS /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:20:43] "POST /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:20:49] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:20:49] "POST /api/mj/query/ HTTP/1.1" 200 -
+18.142.221.221 - - [09/Aug/2023 08:20:53] "OPTIONS /api/requestVerification HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:20:53] "POST /api/mj/query/ HTTP/1.1" 200 -
+18.142.221.221 - - [09/Aug/2023 08:20:55] "POST /api/requestVerification HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:20:59] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:20:59] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:21:03] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:21:08] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:21:09] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:21:13] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:21:19] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:21:19] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:21:24] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:21:29] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:21:29] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:21:34] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:21:39] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:21:39] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:21:44] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:21:49] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:21:49] "POST /api/mj/query/ HTTP/1.1" 200 -
+107.178.232.198 - - [09/Aug/2023 08:21:51] "POST /webhook/mj HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:21:54] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:22:23] "OPTIONS /api/newproduct HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 08:22:29] "POST /api/newproduct HTTP/1.1" 200 -
+18.142.221.221 - - [09/Aug/2023 08:22:32] "OPTIONS /api/mj/imagine/ HTTP/1.1" 200 -
+18.142.221.221 - - [09/Aug/2023 08:22:34] "POST /api/mj/imagine/ HTTP/1.1" 200 -
+18.142.221.221 - - [09/Aug/2023 08:22:40] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+18.142.221.221 - - [09/Aug/2023 08:22:41] "POST /api/mj/query/ HTTP/1.1" 200 -
+18.142.221.221 - - [09/Aug/2023 08:22:45] "POST /api/mj/query/ HTTP/1.1" 200 -
+18.142.221.221 - - [09/Aug/2023 08:22:50] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+18.142.221.221 - - [09/Aug/2023 08:22:51] "POST /api/mj/query/ HTTP/1.1" 200 -
+18.142.221.221 - - [09/Aug/2023 08:22:55] "POST /api/mj/query/ HTTP/1.1" 200 -
+18.142.221.221 - - [09/Aug/2023 08:23:00] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+18.142.221.221 - - [09/Aug/2023 08:23:01] "POST /api/mj/query/ HTTP/1.1" 200 -
+18.142.221.221 - - [09/Aug/2023 08:23:05] "POST /api/mj/query/ HTTP/1.1" 200 -
+18.142.221.221 - - [09/Aug/2023 08:23:10] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+18.142.221.221 - - [09/Aug/2023 08:23:12] "POST /api/mj/query/ HTTP/1.1" 200 -
+18.142.221.221 - - [09/Aug/2023 08:23:15] "POST /api/mj/query/ HTTP/1.1" 200 -
+18.142.221.221 - - [09/Aug/2023 08:23:20] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+18.142.221.221 - - [09/Aug/2023 08:23:21] "POST /api/mj/query/ HTTP/1.1" 200 -
+18.142.221.221 - - [09/Aug/2023 08:23:25] "POST /api/mj/query/ HTTP/1.1" 200 -
+107.178.232.163 - - [09/Aug/2023 08:23:26] "POST /webhook/mj HTTP/1.1" 200 -
+18.142.221.221 - - [09/Aug/2023 08:23:30] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+18.142.221.221 - - [09/Aug/2023 08:23:31] "POST /api/mj/query/ HTTP/1.1" 200 -
+18.142.221.221 - - [09/Aug/2023 08:23:53] "OPTIONS /api/newproduct HTTP/1.1" 200 -
+18.142.221.221 - - [09/Aug/2023 08:24:00] "POST /api/newproduct HTTP/1.1" 200 -
+101.82.108.155 - - [09/Aug/2023 08:42:13] "OPTIONS /api/requestVerification HTTP/1.1" 200 -
+101.82.108.155 - - [09/Aug/2023 08:42:14] "POST /api/requestVerification HTTP/1.1" 200 -
+101.82.108.155 - - [09/Aug/2023 08:42:15] "OPTIONS /api/mj/imagine/ HTTP/1.1" 200 -
+101.82.108.155 - - [09/Aug/2023 08:42:16] "POST /api/mj/imagine/ HTTP/1.1" 200 -
+101.82.108.155 - - [09/Aug/2023 08:42:22] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+101.82.108.155 - - [09/Aug/2023 08:42:23] "POST /api/mj/query/ HTTP/1.1" 200 -
+101.82.108.155 - - [09/Aug/2023 08:42:27] "POST /api/mj/query/ HTTP/1.1" 200 -
+101.82.108.155 - - [09/Aug/2023 08:42:32] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+101.82.108.155 - - [09/Aug/2023 08:42:33] "POST /api/mj/query/ HTTP/1.1" 200 -
+101.82.108.155 - - [09/Aug/2023 08:42:39] "POST /api/mj/query/ HTTP/1.1" 200 -
+101.82.108.155 - - [09/Aug/2023 08:42:42] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+101.82.108.155 - - [09/Aug/2023 08:42:43] "POST /api/mj/query/ HTTP/1.1" 200 -
+101.82.108.155 - - [09/Aug/2023 08:42:48] "POST /api/mj/query/ HTTP/1.1" 200 -
+101.82.108.155 - - [09/Aug/2023 08:42:53] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+101.82.108.155 - - [09/Aug/2023 08:42:54] "POST /api/mj/query/ HTTP/1.1" 200 -
+101.82.108.155 - - [09/Aug/2023 08:42:57] "POST /api/mj/query/ HTTP/1.1" 200 -
+101.82.108.155 - - [09/Aug/2023 08:43:02] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+101.82.108.155 - - [09/Aug/2023 08:43:03] "POST /api/mj/query/ HTTP/1.1" 200 -
+101.82.108.155 - - [09/Aug/2023 08:43:07] "POST /api/mj/query/ HTTP/1.1" 200 -
+101.82.108.155 - - [09/Aug/2023 08:43:12] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+101.82.108.155 - - [09/Aug/2023 08:43:13] "POST /api/mj/query/ HTTP/1.1" 200 -
+101.82.108.155 - - [09/Aug/2023 08:43:17] "POST /api/mj/query/ HTTP/1.1" 200 -
+107.178.232.198 - - [09/Aug/2023 08:43:19] "POST /webhook/mj HTTP/1.1" 200 -
+101.82.108.155 - - [09/Aug/2023 08:43:23] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+101.82.108.155 - - [09/Aug/2023 08:43:23] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:02:04] "OPTIONS /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:02:05] "POST /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:02:11] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:02:12] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:02:16] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:02:21] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:02:22] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:02:26] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:02:31] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:02:32] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:02:36] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:02:41] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:02:42] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:02:46] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:02:51] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:02:52] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:02:56] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:03:01] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:03:02] "POST /api/mj/query/ HTTP/1.1" 200 -
+107.178.232.248 - - [09/Aug/2023 09:03:02] "POST /webhook/mj HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:03:06] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:03:41] "OPTIONS /api/newproduct HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:03:47] "POST /api/newproduct HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:07:11] "OPTIONS /api/requestVerification HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:07:12] "POST /api/requestVerification HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:10:49] "OPTIONS /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:10:51] "POST /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:10:56] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:10:57] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:11:01] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:11:06] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:11:07] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:11:11] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:11:16] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:11:17] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:11:22] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:11:26] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:11:27] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:11:31] "POST /api/mj/query/ HTTP/1.1" 200 -
+107.178.200.226 - - [09/Aug/2023 09:11:35] "POST /webhook/mj HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:11:36] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:11:42] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:11:42] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:12:35] "OPTIONS /api/newproduct HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:12:39] "POST /api/newproduct HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:12:49] "OPTIONS /api/newproduct HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:12:53] "POST /api/newproduct HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:18:03] "OPTIONS /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:18:05] "POST /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:18:11] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:18:12] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:18:16] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:18:21] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:18:22] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:18:26] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:18:31] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:18:32] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:18:36] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:18:41] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:18:42] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:18:46] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:18:51] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:18:52] "POST /api/mj/query/ HTTP/1.1" 200 -
+处理前：  7092069073176 Cyberpunk,Shot by DSLR,Surreal,puzzle,Popsicle
+处理后：  7092069073176 Cyberpunk,Shot by DSLR,Surreal,puzzle,Popsicle --ar 1:2
+{'content': 'Cyberpunk,Shot by DSLR,Surreal,puzzle,Popsicle --ar 1:2', 'imageUrl': 'https://cdn.discordapp.com/attachments/1128685518339710976/1138747581564993596/AjKaBaL_CyberpunkShot_by_DSLRSurrealpuzzlePopsicle_995a2061-ebb4-4d3b-b7c5-5263f0890e6d.png', 'imageUrls': ['https://cdn.midjourney.com/995a2061-ebb4-4d3b-b7c5-5263f0890e6d/0_0.png', 'https://cdn.midjourney.com/995a2061-ebb4-4d3b-b7c5-5263f0890e6d/0_1.png', 'https://cdn.midjourney.com/995a2061-ebb4-4d3b-b7c5-5263f0890e6d/0_2.png', 'https://cdn.midjourney.com/995a2061-ebb4-4d3b-b7c5-5263f0890e6d/0_3.png'], 'buttons': ['U1', 'U2', 'U3', 'U4', '🔄', 'V1', 'V2', 'V3', 'V4'], 'createdAt': '2023-08-09T08:16:20.455Z', 'responseAt': '2023-08-09T08:16:20.718Z', 'ref': '', 'description': '', 'accountId': 'IimmJTwqsNCMJSjhntIw', 'type': 'imagine', 'originatingMessageId': 'f8jfBNk49QyA6vDswEfK', 'buttonMessageId': 'qkl8Aw5CPuO9PyafwWKe'}
+处理前：  7092069073176 Cyberpunk,Shot by DSLR,Surreal,puzzle,Popsicle
+处理后：  7092069073176 Cyberpunk,Shot by DSLR,Surreal,puzzle,Popsicle --ar 1:2
+write 7092201816344 token to shopify metafield successfully! ----> eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcl9pZCI6IjcwOTIyMDE4MTYzNDQiLCJleHAiOjE2OTE1NzI4NTR9.uk0Mdj0hNrxmgViUVScGjyHooE9tYbAZXiDTzFwWUlc
+{'content': 'Cyberpunk,Shot by DSLR,Surreal,puzzle,Popsicle --ar 1:2', 'imageUrl': 'https://cdn.discordapp.com/attachments/1128685518339710976/1138748954352300093/AjKaBaL_CyberpunkShot_by_DSLRSurrealpuzzlePopsicle_bfdd1f68-186c-424c-bda1-299cf2c5cbda.png', 'imageUrls': ['https://cdn.midjourney.com/bfdd1f68-186c-424c-bda1-299cf2c5cbda/0_0.png', 'https://cdn.midjourney.com/bfdd1f68-186c-424c-bda1-299cf2c5cbda/0_1.png', 'https://cdn.midjourney.com/bfdd1f68-186c-424c-bda1-299cf2c5cbda/0_2.png', 'https://cdn.midjourney.com/bfdd1f68-186c-424c-bda1-299cf2c5cbda/0_3.png'], 'buttons': ['U1', 'U2', 'U3', 'U4', '🔄', 'V1', 'V2', 'V3', 'V4'], 'createdAt': '2023-08-09T08:21:48.043Z', 'responseAt': '2023-08-09T08:21:51.353Z', 'ref': '', 'description': '', 'accountId': 'IimmJTwqsNCMJSjhntIw', 'type': 'imagine', 'originatingMessageId': 'tepNVR0L4Eu3r9cL4azR', 'buttonMessageId': 'rTXPZuyPFW7Q0IVnC4Oo'}
+Successfully added product 8517097586968, selected variant id: 46112757383448
+处理前：  7092201816344 Double exposure,Watercolour,Sun light,Mise-en-scene composition,Isolation composition,Lvory,Metallic,Bird view,gully
+处理后：  7092201816344 Double exposure,Watercolour,Sun light,Mise-en-scene composition,Isolation composition,Lvory,Metallic,Bird view,gully --ar 1:2
+{'content': 'Double exposure,Watercolour,Sun light,Mise-en-scene composition,Isolation composition,Lvory,Metallic,Bird view,gully --ar 1:2', 'imageUrl': 'https://cdn.discordapp.com/attachments/1128685518339710976/1138749366681731132/AjKaBaL_Double_exposureWatercolourSun_lightMise-en-scene_compos_a707023c-6cf3-4273-9a44-e8e133567f22.png', 'imageUrls': ['https://cdn.midjourney.com/a707023c-6cf3-4273-9a44-e8e133567f22/0_0.png', 'https://cdn.midjourney.com/a707023c-6cf3-4273-9a44-e8e133567f22/0_1.png', 'https://cdn.midjourney.com/a707023c-6cf3-4273-9a44-e8e133567f22/0_2.png', 'https://cdn.midjourney.com/a707023c-6cf3-4273-9a44-e8e133567f22/0_3.png'], 'buttons': ['U1', 'U2', 'U3', 'U4', '🔄', 'V1', 'V2', 'V3', 'V4'], 'createdAt': '2023-08-09T08:23:26.071Z', 'responseAt': '2023-08-09T08:23:26.452Z', 'ref': '', 'description': '', 'accountId': 'IimmJTwqsNCMJSjhntIw', 'type': 'imagine', 'originatingMessageId': 'GuXF0tCjOrzJych1xUox', 'buttonMessageId': '5p0B99yHBXEKCLG14ghH'}
+Successfully added product 8517100437784, selected variant id: 46112763707672
+write 7061354938648 token to shopify metafield successfully! ----> eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcl9pZCI6IjcwNjEzNTQ5Mzg2NDgiLCJleHAiOjE2OTE1NzQxMzR9.asnKry_NZrZA8ysiXaK6x0fj5PZf9ysiFVGufPkKoxc
+处理前：  7061354938648 Brick,Blacklight cake
+处理后：  7061354938648 Brick,Blacklight cake --ar 1:2
+{'content': 'Brick,Blacklight cake --ar 1:2', 'imageUrl': 'https://cdn.discordapp.com/attachments/1128685518339710976/1138754370129891389/AjKaBaL_BrickBlacklight_cake_0c1947c1-129d-4c8f-b935-b21ebb8cb35a.png', 'imageUrls': ['https://cdn.midjourney.com/0c1947c1-129d-4c8f-b935-b21ebb8cb35a/0_0.png', 'https://cdn.midjourney.com/0c1947c1-129d-4c8f-b935-b21ebb8cb35a/0_1.png', 'https://cdn.midjourney.com/0c1947c1-129d-4c8f-b935-b21ebb8cb35a/0_2.png', 'https://cdn.midjourney.com/0c1947c1-129d-4c8f-b935-b21ebb8cb35a/0_3.png'], 'buttons': ['U1', 'U2', 'U3', 'U4', '🔄', 'V1', 'V2', 'V3', 'V4'], 'createdAt': '2023-08-09T08:43:19.014Z', 'responseAt': '2023-08-09T08:43:19.245Z', 'ref': '', 'description': '', 'accountId': 'IimmJTwqsNCMJSjhntIw', 'type': 'imagine', 'originatingMessageId': 'D7t89CdmEu7MsuonarIb', 'buttonMessageId': 'J7fCrpWgIRFXQUwT7FF1'}
+处理前：  7092069073176 flower,colorful-tile
+
+处理后：  7092069073176 flower,colorful-tile
+ --ar 1:2
+{'content': 'flower,colorful-tile --ar 1:2', 'imageUrl': 'https://cdn.discordapp.com/attachments/1128685518339710976/1138759331702124584/AjKaBaL_flowercolorful-tile_cdb70311-2d9f-46ee-8163-92b9575cbba1.png', 'imageUrls': ['https://cdn.midjourney.com/cdb70311-2d9f-46ee-8163-92b9575cbba1/0_0.png', 'https://cdn.midjourney.com/cdb70311-2d9f-46ee-8163-92b9575cbba1/0_1.png', 'https://cdn.midjourney.com/cdb70311-2d9f-46ee-8163-92b9575cbba1/0_2.png', 'https://cdn.midjourney.com/cdb70311-2d9f-46ee-8163-92b9575cbba1/0_3.png'], 'buttons': ['U1', 'U2', 'U3', 'U4', '🔄', 'V1', 'V2', 'V3', 'V4'], 'createdAt': '2023-08-09T09:03:02.000Z', 'responseAt': '2023-08-09T09:03:02.233Z', 'ref': '', 'description': '', 'accountId': 'IimmJTwqsNCMJSjhntIw', 'type': 'imagine', 'originatingMessageId': '8QtAw2rrKxz3Vvz7ygwT', 'buttonMessageId': 'BbAtI03omgJz4XrGQqiu'}
+Successfully added product 8517166760216, selected variant id: 46112956940568
+write 7092069073176 token to shopify metafield successfully! ----> eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcl9pZCI6IjcwOTIwNjkwNzMxNzYiLCJleHAiOjE2OTE1NzU2MzJ9.hT6n4bP3ISshSVV_2645esbl_1Bk6tWzQgjwluf5I2Y
+处理前：  7092069073176 Confirm the model is iphone14?
+处理后：  7092069073176 Confirm the model is iphone14? --ar 1:2
+{'content': 'Confirm the model is iphone14? --ar 1:2', 'imageUrl': 'https://cdn.discordapp.com/attachments/1128685518339710976/1138761482323107901/AjKaBaL_Confirm_the_model_is_iphone14_d00c89eb-b928-48b0-a3c3-82989b7b43fe.png', 'imageUrls': ['https://cdn.midjourney.com/d00c89eb-b928-48b0-a3c3-82989b7b43fe/0_0.png', 'https://cdn.midjourney.com/d00c89eb-b928-48b0-a3c3-82989b7b43fe/0_1.png', 'https://cdn.midjourney.com/d00c89eb-b928-48b0-a3c3-82989b7b43fe/0_2.png', 'https://cdn.midjourney.com/d00c89eb-b928-48b0-a3c3-82989b7b43fe/0_3.png'], 'buttons': ['U1', 'U2', 'U3', 'U4', '🔄', 'V1', 'V2', 'V3', 'V4'], 'createdAt': '2023-08-09T09:11:34.772Z', 'responseAt': '2023-08-09T09:11:34.992Z', 'ref': '', 'description': '', 'accountId': 'IimmJTwqsNCMJSjhntIw', 'type': 'imagine', 'originatingMessageId': 'gdvrcQ4iKe4DxuJxL7jB', 'buttonMessageId': 'GyZ4MPwCKGSQRbZjylJP'}
+Successfully added product 8517178556696, selected variant id: 46112990134552
+Successfully added product 8517178786072, selected variant id: 46112990757144
+处理前：  7092069073176 Symmetrical composition,cat
+处理后：  7092069073176 Symmetrical composition,cat --ar 1:2
+107.178.200.192 - - [09/Aug/2023 09:18:54] "POST /webhook/mj HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:18:56] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:19:55] "OPTIONS /api/newproduct HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:20:02] "POST /api/newproduct HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:39:25] "OPTIONS /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:39:26] "POST /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:39:32] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:39:33] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:39:37] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:39:42] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:39:43] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:39:47] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:39:52] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:39:53] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:39:57] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:40:02] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:40:03] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:40:07] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:40:12] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:40:13] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:40:17] "POST /api/mj/query/ HTTP/1.1" 200 -
+107.178.200.229 - - [09/Aug/2023 09:40:20] "POST /webhook/mj HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:40:22] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:40:23] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:42:22] "OPTIONS /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:42:23] "POST /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:42:29] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:42:31] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:42:35] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:42:40] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:42:41] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:42:44] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:42:49] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:42:50] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:42:54] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:42:59] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:43:01] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:43:04] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:43:09] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:43:10] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:43:14] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:43:19] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:43:20] "POST /api/mj/query/ HTTP/1.1" 200 -
+107.178.238.35 - - [09/Aug/2023 09:43:22] "POST /webhook/mj HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:43:24] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:52:23] "OPTIONS /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:52:24] "POST /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:52:30] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:52:31] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:52:35] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:52:40] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:52:41] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:52:45] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:52:50] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:52:51] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:52:55] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:53:00] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:53:01] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:53:05] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:53:10] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:53:11] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:53:15] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:53:20] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:53:21] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:53:25] "POST /api/mj/query/ HTTP/1.1" 200 -
+107.178.200.231 - - [09/Aug/2023 09:53:29] "POST /webhook/mj HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:53:30] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:53:31] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:54:17] "OPTIONS /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:54:18] "POST /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:54:24] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:54:25] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:54:29] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:54:34] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:54:35] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:54:39] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:54:44] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:54:45] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:54:46] "OPTIONS /api/requestVerification HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 09:54:47] "POST /api/requestVerification HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:54:49] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:54:54] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:54:54] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:54:59] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:55:04] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:55:05] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:55:09] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:55:14] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:55:15] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:55:19] "POST /api/mj/query/ HTTP/1.1" 200 -
+107.178.200.229 - - [09/Aug/2023 09:55:20] "POST /webhook/mj HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:55:24] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:55:25] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:56:06] "OPTIONS /api/newproduct HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 09:56:10] "POST /api/newproduct HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:18:25] "OPTIONS /api/requestVerification HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:18:27] "POST /api/requestVerification HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:19:19] "OPTIONS /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:19:20] "POST /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:19:26] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:19:27] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:19:31] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:19:36] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:19:37] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:19:41] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:19:46] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:19:47] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:19:51] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:19:56] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:19:57] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:20:01] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:20:06] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:20:07] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:20:11] "POST /api/mj/query/ HTTP/1.1" 200 -
+107.178.232.180 - - [09/Aug/2023 10:20:16] "POST /webhook/mj HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:20:16] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:20:17] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:20:54] "OPTIONS /api/newproduct HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:20:59] "POST /api/newproduct HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:27:23] "OPTIONS /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:27:24] "POST /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:27:30] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:27:31] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:27:35] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:27:41] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:27:42] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:27:45] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:27:50] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:27:50] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:27:55] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:28:00] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:28:01] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:28:05] "POST /api/mj/query/ HTTP/1.1" 200 -
+107.178.232.180 - - [09/Aug/2023 10:28:08] "POST /webhook/mj HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:28:10] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:28:10] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:35:10] "OPTIONS /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:35:11] "POST /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:35:17] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:35:18] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:35:22] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:35:27] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:35:28] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:35:32] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:35:37] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:35:38] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:35:42] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:35:47] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:35:49] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:35:52] "POST /api/mj/query/ HTTP/1.1" 200 -
+{'content': 'Symmetrical composition,cat --ar 1:2', 'imageUrl': 'https://cdn.discordapp.com/attachments/1128685518339710976/1138763325312860190/AjKaBaL_Symmetrical_compositioncat_706bf8c5-5c0b-4b85-a49c-0e07c76a1052.png', 'imageUrls': ['https://cdn.midjourney.com/706bf8c5-5c0b-4b85-a49c-0e07c76a1052/0_0.png', 'https://cdn.midjourney.com/706bf8c5-5c0b-4b85-a49c-0e07c76a1052/0_1.png', 'https://cdn.midjourney.com/706bf8c5-5c0b-4b85-a49c-0e07c76a1052/0_2.png', 'https://cdn.midjourney.com/706bf8c5-5c0b-4b85-a49c-0e07c76a1052/0_3.png'], 'buttons': ['U1', 'U2', 'U3', 'U4', '🔄', 'V1', 'V2', 'V3', 'V4'], 'createdAt': '2023-08-09T09:18:54.133Z', 'responseAt': '2023-08-09T09:18:54.413Z', 'ref': '', 'description': '', 'accountId': 'IimmJTwqsNCMJSjhntIw', 'type': 'imagine', 'originatingMessageId': '0tbUzJT2r0S54IZ9nv67', 'buttonMessageId': '3EOQXGiFfrBDGvbEa2jW'}
+Successfully added product 8517186519320, selected variant id: 46113006321944
+处理前：  7061354938648 Hello world,Python
+处理后：  7061354938648 Hello world,Python --ar 1:2
+{'content': 'Hello world,Python --ar 1:2', 'imageUrl': 'https://cdn.discordapp.com/attachments/1128685518339710976/1138768717329731704/AjKaBaL_Hello_worldPython_acd66803-4129-4c72-ad70-01b97d8c859c.png', 'imageUrls': ['https://cdn.midjourney.com/acd66803-4129-4c72-ad70-01b97d8c859c/0_0.png', 'https://cdn.midjourney.com/acd66803-4129-4c72-ad70-01b97d8c859c/0_1.png', 'https://cdn.midjourney.com/acd66803-4129-4c72-ad70-01b97d8c859c/0_2.png', 'https://cdn.midjourney.com/acd66803-4129-4c72-ad70-01b97d8c859c/0_3.png'], 'buttons': ['U1', 'U2', 'U3', 'U4', '🔄', 'V1', 'V2', 'V3', 'V4'], 'createdAt': '2023-08-09T09:40:19.653Z', 'responseAt': '2023-08-09T09:40:19.910Z', 'ref': '', 'description': '', 'accountId': 'IimmJTwqsNCMJSjhntIw', 'type': 'imagine', 'originatingMessageId': 'enAT3HgRrutCmi9fTvOd', 'buttonMessageId': 'BzgebmOxFMACs64Jeh3S'}
+处理前：  7061354938648 Hello world,Python
+处理后：  7061354938648 Hello world,Python --ar 1:2
+{'content': 'Hello world,Python --ar 1:2', 'imageUrl': 'https://cdn.discordapp.com/attachments/1128685518339710976/1138769480370106389/AjKaBaL_Hello_worldPython_df1ce679-c927-4099-b5a7-57a653b498eb.png', 'imageUrls': ['https://cdn.midjourney.com/df1ce679-c927-4099-b5a7-57a653b498eb/0_0.png', 'https://cdn.midjourney.com/df1ce679-c927-4099-b5a7-57a653b498eb/0_1.png', 'https://cdn.midjourney.com/df1ce679-c927-4099-b5a7-57a653b498eb/0_2.png', 'https://cdn.midjourney.com/df1ce679-c927-4099-b5a7-57a653b498eb/0_3.png'], 'buttons': ['U1', 'U2', 'U3', 'U4', '🔄', 'V1', 'V2', 'V3', 'V4'], 'createdAt': '2023-08-09T09:43:21.565Z', 'responseAt': '2023-08-09T09:43:21.774Z', 'ref': '', 'description': '', 'accountId': 'IimmJTwqsNCMJSjhntIw', 'type': 'imagine', 'originatingMessageId': 'En2DVDjU15OWbVoUoljp', 'buttonMessageId': 'MkosELcNLUb7MvfjFrVe'}
+处理前：  7092069073176 hello,sunshine
+处理后：  7092069073176 hello,sunshine --ar 1:2
+{'content': 'hello,sunshine --ar 1:2', 'imageUrl': 'https://cdn.discordapp.com/attachments/1128685518339710976/1138772025901588540/AjKaBaL_hellosunshine_bbfaf82b-6b62-4d93-b425-d033689b7889.png', 'imageUrls': ['https://cdn.midjourney.com/bbfaf82b-6b62-4d93-b425-d033689b7889/0_0.png', 'https://cdn.midjourney.com/bbfaf82b-6b62-4d93-b425-d033689b7889/0_1.png', 'https://cdn.midjourney.com/bbfaf82b-6b62-4d93-b425-d033689b7889/0_2.png', 'https://cdn.midjourney.com/bbfaf82b-6b62-4d93-b425-d033689b7889/0_3.png'], 'buttons': ['U1', 'U2', 'U3', 'U4', '🔄', 'V1', 'V2', 'V3', 'V4'], 'createdAt': '2023-08-09T09:53:28.616Z', 'responseAt': '2023-08-09T09:53:28.878Z', 'ref': '', 'description': '', 'accountId': 'IimmJTwqsNCMJSjhntIw', 'type': 'imagine', 'originatingMessageId': 'QF9Bl03fdTs9J6jhbiXj', 'buttonMessageId': 'a6kDQtgp0BSz9nU51GWG'}
+处理前：  7092069073176 hello,sunshine
+处理后：  7092069073176 hello,sunshine --ar 1:2
+write 7061354938648 token to shopify metafield successfully! ----> eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcl9pZCI6IjcwNjEzNTQ5Mzg2NDgiLCJleHAiOjE2OTE1Nzg0ODd9.KGIUzPm46jyv6jPgIx3TApl03jdZ_ZfMmfnEOJznliI
+{'content': 'hello,sunshine --ar 1:2', 'imageUrl': 'https://cdn.discordapp.com/attachments/1128685518339710976/1138772494682181632/AjKaBaL_hellosunshine_ecc2ede2-6666-4979-80cd-e391b252d014.png', 'imageUrls': ['https://cdn.midjourney.com/ecc2ede2-6666-4979-80cd-e391b252d014/0_0.png', 'https://cdn.midjourney.com/ecc2ede2-6666-4979-80cd-e391b252d014/0_1.png', 'https://cdn.midjourney.com/ecc2ede2-6666-4979-80cd-e391b252d014/0_2.png', 'https://cdn.midjourney.com/ecc2ede2-6666-4979-80cd-e391b252d014/0_3.png'], 'buttons': ['U1', 'U2', 'U3', 'U4', '🔄', 'V1', 'V2', 'V3', 'V4'], 'createdAt': '2023-08-09T09:55:20.247Z', 'responseAt': '2023-08-09T09:55:20.509Z', 'ref': '', 'description': '', 'accountId': 'IimmJTwqsNCMJSjhntIw', 'type': 'imagine', 'originatingMessageId': 'AUFVtv7wQuOCcvbxOhIj', 'buttonMessageId': '1tGmljTjJfJFihHOKuAp'}
+Successfully added product 8517225742616, selected variant id: 46113115439384
+write 7092069073176 token to shopify metafield successfully! ----> eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcl9pZCI6IjcwOTIwNjkwNzMxNzYiLCJleHAiOjE2OTE1Nzk5MDZ9.Fb_hbegOAgeQ6hH6tO9wIVc7DAMhyqnC8lHQPQHxV9o
+处理前：  7092069073176 A beautiful boat floats on a quiet lake with the sun shining through and an old man fishing in the boat
+处理后：  7092069073176 A beautiful boat floats on a quiet lake with the sun shining through and an old man fishing in the boat --ar 1:2
+{'content': 'A beautiful boat floats on a quiet lake with the sun shining through and an old man fishing in the boat --ar 1:2', 'imageUrl': 'https://cdn.discordapp.com/attachments/1128685518339710976/1138778765292486698/AjKaBaL_A_beautiful_boat_floats_on_a_quiet_lake_with_the_sun_sh_1ab303dd-88bf-4292-a055-099268464173.png', 'imageUrls': ['https://cdn.midjourney.com/1ab303dd-88bf-4292-a055-099268464173/0_0.png', 'https://cdn.midjourney.com/1ab303dd-88bf-4292-a055-099268464173/0_1.png', 'https://cdn.midjourney.com/1ab303dd-88bf-4292-a055-099268464173/0_2.png', 'https://cdn.midjourney.com/1ab303dd-88bf-4292-a055-099268464173/0_3.png'], 'buttons': ['U1', 'U2', 'U3', 'U4', '🔄', 'V1', 'V2', 'V3', 'V4'], 'createdAt': '2023-08-09T10:20:15.578Z', 'responseAt': '2023-08-09T10:20:15.957Z', 'ref': '', 'description': '', 'accountId': 'IimmJTwqsNCMJSjhntIw', 'type': 'imagine', 'originatingMessageId': '4VRxfvt0wzVFDboVDgbj', 'buttonMessageId': 'Gn0MoMIZKuwaba4daLvu'}
+Successfully added product 8517268734232, selected variant id: 46113213219096
+处理前：  7092069073176 colorful flowers,tile,Monet,
+处理后：  7092069073176 colorful flowers,tile,Monet, --ar 1:2
+{'content': 'colorful flowers,tile,Monet, --ar 1:2', 'imageUrl': 'https://cdn.discordapp.com/attachments/1128685518339710976/1138780745712812112/AjKaBaL_colorful_flowerstileMonet_87aa3b9b-a517-44e1-8bd1-204fdc1ef889.png', 'imageUrls': ['https://cdn.midjourney.com/87aa3b9b-a517-44e1-8bd1-204fdc1ef889/0_0.png', 'https://cdn.midjourney.com/87aa3b9b-a517-44e1-8bd1-204fdc1ef889/0_1.png', 'https://cdn.midjourney.com/87aa3b9b-a517-44e1-8bd1-204fdc1ef889/0_2.png', 'https://cdn.midjourney.com/87aa3b9b-a517-44e1-8bd1-204fdc1ef889/0_3.png'], 'buttons': ['U1', 'U2', 'U3', 'U4', '🔄', 'V1', 'V2', 'V3', 'V4'], 'createdAt': '2023-08-09T10:28:07.418Z', 'responseAt': '2023-08-09T10:28:07.815Z', 'ref': '', 'description': '', 'accountId': 'IimmJTwqsNCMJSjhntIw', 'type': 'imagine', 'originatingMessageId': 'STDDedkV3hNySvwHslh1', 'buttonMessageId': 'c0hqmvykCIBAmvX0wlQ6'}
+处理前：  7092069073176 colorful flowers,tile,Monet,
+处理后：  7092069073176 colorful flowers,tile,Monet, --ar 1:2
+107.178.200.231 - - [09/Aug/2023 10:35:53] "POST /webhook/mj HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:35:57] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:35:58] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:37:12] "OPTIONS /api/newproduct HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 10:37:18] "POST /api/newproduct HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 10:38:33] "OPTIONS /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 10:38:34] "POST /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 10:38:40] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 10:38:41] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 10:38:45] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 10:38:50] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 10:38:51] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 10:38:55] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 10:39:00] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 10:39:01] "POST /api/mj/query/ HTTP/1.1" 200 -
+107.178.200.215 - - [09/Aug/2023 10:39:29] "POST /webhook/mj HTTP/1.1" 200 -
+212.107.29.84 - - [09/Aug/2023 11:15:18] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 11:25:18] "OPTIONS /api/requestVerification HTTP/1.1" 200 -
+212.107.29.83 - - [09/Aug/2023 11:25:19] "POST /api/requestVerification HTTP/1.1" 200 -
+212.107.29.88 - - [09/Aug/2023 11:58:02] "OPTIONS /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.88 - - [09/Aug/2023 11:58:03] "POST /api/mj/imagine/ HTTP/1.1" 200 -
+212.107.29.88 - - [09/Aug/2023 11:58:09] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.88 - - [09/Aug/2023 11:58:10] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.88 - - [09/Aug/2023 11:58:14] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.88 - - [09/Aug/2023 11:58:19] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.88 - - [09/Aug/2023 11:58:20] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.88 - - [09/Aug/2023 11:58:24] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.88 - - [09/Aug/2023 11:58:29] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.88 - - [09/Aug/2023 11:58:29] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.88 - - [09/Aug/2023 11:58:34] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.88 - - [09/Aug/2023 11:58:39] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.88 - - [09/Aug/2023 11:58:39] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.88 - - [09/Aug/2023 11:58:44] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.88 - - [09/Aug/2023 11:58:49] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.88 - - [09/Aug/2023 11:58:49] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.88 - - [09/Aug/2023 11:58:54] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.88 - - [09/Aug/2023 11:58:59] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.88 - - [09/Aug/2023 11:58:59] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.88 - - [09/Aug/2023 11:59:04] "POST /api/mj/query/ HTTP/1.1" 200 -
+107.178.232.180 - - [09/Aug/2023 11:59:06] "POST /webhook/mj HTTP/1.1" 200 -
+212.107.29.88 - - [09/Aug/2023 11:59:09] "OPTIONS /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.88 - - [09/Aug/2023 11:59:09] "POST /api/mj/query/ HTTP/1.1" 200 -
+212.107.29.88 - - [09/Aug/2023 11:59:29] "OPTIONS /api/newproduct HTTP/1.1" 200 -
+212.107.29.88 - - [09/Aug/2023 11:59:33] "POST /api/newproduct HTTP/1.1" 200 -

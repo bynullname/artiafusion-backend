@@ -17,3 +17,4 @@ flask db upgrade
 
 
 tail -f output.log
+ddd
